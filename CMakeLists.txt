@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.12)
+project(MultiPlanarReconstruction CXX)
+set(CMAKE_CXX_STANDARD 11)
+find_package(VTK REQUIRED COMPONENTS CommonCore CommonDataModel CommonMath CommonTransforms ImagingCore IOImage)
+add_executable(mpr_slicer mpr_slicer.cpp)
+target_link_libraries(mpr_slicer PRIVATE ${VTK_LIBRARIES})
+vtk_module_autoinit(TARGETS mpr_slicer MODULES ${VTK_LIBRARIES})
