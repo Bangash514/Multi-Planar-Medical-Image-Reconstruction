@@ -1,0 +1,13 @@
+pair | plane | mean abs diff (gray levels) | max abs diff | pixels differing by more than 5 (%)
+vtk-itk | axial | 0.000 | 0.000 | 0.00
+vtk-itk | coronal | 0.000 | 0.000 | 0.00
+vtk-itk | sagittal | 0.000 | 0.000 | 0.00
+vtk-itk | oblique | 0.000 | 0.001 | 0.00
+vtk-opencv | axial | 0.000 | 0.000 | 0.00
+vtk-opencv | coronal | 0.000 | 0.000 | 0.00
+vtk-opencv | sagittal | 0.000 | 0.000 | 0.00
+vtk-opencv | oblique | 0.000 | 0.001 | 0.00
+itk-opencv | axial | 0.000 | 0.000 | 0.00
+itk-opencv | coronal | 0.000 | 0.000 | 0.00
+itk-opencv | sagittal | 0.000 | 0.000 | 0.00
+itk-opencv | oblique | 0.000 | 0.000 | 0.00

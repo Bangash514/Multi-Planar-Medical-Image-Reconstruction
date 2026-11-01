@@ -36,3 +36,21 @@ If you use, adapt or contribute to this work, please credit the author and **con
 
 ## Author
 BEN, Software Engineer. GitHub: [Bangash514](https://github.com/Bangash514)
+
+## Python versions (VTK, ITK, OpenCV)
+
+Same synthetic volume and the same four planes (axial, coronal, sagittal, oblique) in three Python libraries. Each script writes a picture and the raw slices.
+
+```bash
+pip install numpy opencv-python vtk itk
+python3 python/mpr_vtk.py       # VTK 9, vtkImageReslice
+python3 python/mpr_itk.py       # ITK 5, ResampleImageFilter
+python3 python/mpr_opencv.py    # OpenCV only: trilinear sampling from cv2.remap
+python3 python/compare_mpr.py   # pixel-by-pixel comparison
+```
+
+![VTK](results/py_vtk.png)
+![ITK](results/py_itk.png)
+![OpenCV](results/py_opencv.png)
+
+Tested with VTK 9.7.1, ITK 5.4.7, OpenCV 5.0.0. The three libraries give the same slices on this volume (see `results/py_compare.txt`). Synthetic data only; the older `Slicer.py`, `ImageSlicer.py` and `slicer.cpp` are separate earlier work.
